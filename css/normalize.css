@@ -135,6 +135,13 @@ dfn {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+h3 {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
 }
 
 /**
