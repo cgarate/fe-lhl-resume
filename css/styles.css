@@ -5,30 +5,117 @@ body {
   font-size: 16px;
 }
 
-.blueOnWhite {
+body > section {
+  padding-left: 1rem;
+}
+
+.header {
   background-color: #2F0A28;
   color: white;
 }
 
-.blueOnWhite > nav > ul {
+.header > div > nav > ul {
   list-style: none;
 }
 
-.blueOnWhite > nav > ul > li > a {
+.header > div > nav > ul > li > a {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
 }
 
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.navigation > nav > ul {
+  display: flex;
+}
+
+.navigation > nav > ul > li {
+  margin-right: 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content-name {
+  margin: auto;
+}
+
+.about {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+
 .text {
   font-family: 'Lato', sans-serif;
+  text-align: justify;
+}
+
+.skills {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  background-color: #2F0A28;
+  color: white;
+}
+
+.skill-meter-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-meter {
+  flex: 2;
+}
+
+.skill-name {
+  flex: 1;
+}
+
+.skill-percentage {
+  flex: 1;
+}
+
+.experience {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.experience-card {
+  display: flex;
+}
+
+.left-div {
+  padding-right: 1rem;
+}
+
+.right-div {
+  padding-left: 1rem;
+}
+
+.right-div > p {
+  text-align: justify;
 }
 
 .contact {
   background-color: #CADBC0;
+  padding-left: 1rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
 }
 
 .contact > div > ul > li {
   font-family: 'Lato', sans-serif;
   font-size: 0.9rem;
+  list-style: none;
 }
