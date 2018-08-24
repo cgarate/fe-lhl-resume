@@ -3,10 +3,29 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  background-color: #eeeeee;
 }
 
-body > section {
+button {
+  border: none;
+  background-color: white;
+  border-radius: 12px;
+  padding: 0.7rem;
+  text-align: center;
+  margin: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+main {
+  width: 60%;
+  margin: auto;
+  background-color: white;
+}
+
+body > main > section {
   padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .header {
@@ -18,17 +37,31 @@ body > section {
   list-style: none;
 }
 
+/* Links */
 .header > div > nav > ul > li > a {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
+
+  transition-property: font-size;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+}
+
+.header > div > nav > ul > li > a:hover {
+  color: red;
+  font-size: 1.1rem;
 }
 
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding-top: 0.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 .navigation > nav > ul {
@@ -49,14 +82,26 @@ body > section {
   margin: auto;
 }
 
+.header-content-image {
+  margin: auto;
+}
+
 .about {
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
 }
 
+.about p::first-letter {
+  font-weight: 900;
+}
+
 .text {
   font-family: 'Lato', sans-serif;
   text-align: justify;
+}
+
+p::selection {
+  color: orange;
 }
 
 .skills {
@@ -69,6 +114,17 @@ body > section {
 .skill-meter-card {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  padding: 0.8rem;
+}
+
+meter::-webkit-meter-bar {
+  border-radius: 3px;
+  width: 25rem;
+}
+
+meter::-webkit-meter-optimum-value {
+  background: teal;
 }
 
 .skill-meter {
@@ -109,7 +165,7 @@ body > section {
   padding-left: 1rem;
   display: flex;
   align-items: stretch;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
 }
