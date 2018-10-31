@@ -1,28 +1,39 @@
 /* Stylesheet */
+/*
+  Disclaimer:
+  These styles have been coded with the intention to demonstrate different ways to apply selectors.
+  They have not been thoroughly optimized and they don't try to be an example of good CSS practices.
+ */
 
+/* Apply basic styles at body level so by default they cascade to all other tags */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   background-color: #eeeeee;
 }
 
+/* Style a white button (pill style) */
 button {
   border: none;
   background-color: white;
-  border-radius: 12px;
+  border-radius: 20px;
   padding: 0.7rem;
+  margin-top: 1rem;
   text-align: center;
-  margin: 0.5rem;
   cursor: pointer;
   font-weight: bold;
+  font-size: 0.9rem;
 }
 
+/* this the main container, contains all sections */
+/* margin: auto centers the main element on the page */
 main {
   width: 60%;
   margin: auto;
   background-color: white;
 }
 
+/* Apply padding to the sides of all sections */
 body > main > section {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -33,6 +44,7 @@ body > main > section {
   color: white;
 }
 
+/* Removes default bullets in nav ul list */
 .header > div > nav > ul {
   list-style: none;
 }
@@ -44,11 +56,12 @@ body > main > section {
   text-transform: uppercase;
 
   transition-property: font-size;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   transition-timing-function: linear;
-  transition-delay: 1s;
+  transition-delay: 0;
 }
 
+/* Hover effect for links in the nav bar */
 .header > div > nav > ul > li > a:hover {
   color: red;
   font-size: 1.1rem;
@@ -66,6 +79,7 @@ body > main > section {
 
 .navigation > nav > ul {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .navigation > nav > ul > li {
@@ -74,6 +88,7 @@ body > main > section {
 
 .header-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -84,6 +99,13 @@ body > main > section {
 
 .header-content-image {
   margin: auto;
+  padding-bottom: 1.5rem;
+}
+
+/* make the photo rounded */
+.header-content-image > img {
+  border-radius: 100%;
+  border: 1px solid rgb(54, 51, 51);
 }
 
 .about {
@@ -91,6 +113,7 @@ body > main > section {
   padding-top: 1.5rem;
 }
 
+/* Target the first letter of a p element inside all .about classes */
 .about p::first-letter {
   font-weight: 900;
 }
@@ -100,6 +123,7 @@ body > main > section {
   text-align: justify;
 }
 
+/* make the font orange when selecting it */
 p::selection {
   color: orange;
 }
@@ -113,9 +137,11 @@ p::selection {
 
 .skill-meter-card {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  padding: 0.8rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
 }
 
 meter::-webkit-meter-bar {
@@ -124,19 +150,22 @@ meter::-webkit-meter-bar {
 }
 
 meter::-webkit-meter-optimum-value {
-  background: teal;
+  background: rgb(240, 176, 38);
 }
 
+/* Give more space width-wise to the meters */
 .skill-meter {
   flex: 2;
 }
 
 .skill-name {
   flex: 1;
+  font-weight: 900;
 }
 
 .skill-percentage {
   flex: 1;
+  font-weight: 900;
 }
 
 .experience {
@@ -148,14 +177,17 @@ meter::-webkit-meter-optimum-value {
   display: flex;
 }
 
+/* Inside the experience section: left div is the column for the company name */
 .left-div {
   padding-right: 1rem;
 }
 
+/* The Experience description */
 .right-div {
   padding-left: 1rem;
 }
 
+/* The text inside the experience description */
 .right-div > p {
   text-align: justify;
 }
@@ -164,6 +196,7 @@ meter::-webkit-meter-optimum-value {
   background-color: #CADBC0;
   padding-left: 1rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: stretch;
   justify-content: space-around;
   padding-bottom: 1.5rem;
@@ -174,4 +207,49 @@ meter::-webkit-meter-optimum-value {
   font-family: 'Lato', sans-serif;
   font-size: 0.9rem;
   list-style: none;
+}
+
+/* 480 a 960 */
+@media screen and (min-width: 25em) and (max-width: 60em) {
+  main {
+    width: 100%;
+  }
+  .navigation {
+    align-items: flex-start;
+  }
+  .navigation > nav > ul {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .header-content-name {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .header-content-image > img {
+    max-width: 70%;
+    height: 70%;
+  }
+  .header-content-image {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .skill-meter-card {
+    flex-flow: column wrap;
+  }
+  meter::-webkit-meter-bar {
+    width: 18rem;
+  }
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-name-title {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
 }
