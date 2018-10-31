@@ -8,4 +8,5 @@ Project advance is in different branches.
 * 3-Intro-To-CSS: Intro to CSS.
 * 4-Flexbox: Flexbox additions.
 * 5-Advanced-CSS: pseudo selectors, etc.
+* 6-Responsiveness: Media Queries.
 * Master: Finished Project.
