@@ -9,13 +9,13 @@
 body {
   font-family: 'Avenir', sans-serif;
   font-size: 14px;
-  background-color: #eeeeee;
+  background-color: #fffcf7;
 }
 
-/* Style a white button (pill style) */
+/* Style a button (pill style) */
 button {
   border: none;
-  background-color: white;
+  background-color: #eef0f2;
   border-radius: 20px;
   padding: 0.7rem;
   margin-top: 1rem;
@@ -30,7 +30,7 @@ button {
 main {
   width: 60%;
   margin: auto;
-  background-color: white;
+  background-color: #eef0f2;
 }
 
 /* Apply padding to the sides of all sections */
@@ -40,7 +40,7 @@ body > main > section {
 }
 
 .header {
-  background-color: #2F0A28;
+  background-color: #a1b5d8;
   color: white;
 }
 
@@ -54,7 +54,6 @@ body > main > section {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
-
   transition-property: font-size;
   transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -130,7 +129,7 @@ p::selection {
 .skills {
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
-  background-color: #2F0A28;
+  background-color: #a1b5d8;
   color: white;
 }
 
@@ -192,7 +191,7 @@ meter::-webkit-meter-optimum-value {
 }
 
 .contact {
-  background-color: #CADBC0;
+  background-color: #a1b5d8;
   padding-left: 1rem;
   display: flex;
   flex-wrap: wrap;
