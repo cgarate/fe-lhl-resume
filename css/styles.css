@@ -4,12 +4,11 @@
   These styles have been coded with the intention to demonstrate different ways to apply selectors.
   They have not been thoroughly optimized and they don't try to be an example of good CSS practices.
  */
-
 /* Apply basic styles at body level so by default they cascade to all other tags */
 body {
   font-family: 'Avenir', sans-serif;
-  font-size: 14px;
-  background-color: #fffcf7;
+  font-size: 16px;
+  background-color: #a1b5d8;
 }
 
 /* Style a button (pill style) */
@@ -28,13 +27,11 @@ button {
 /* this the main container, contains all sections */
 /* margin: auto centers the main element on the page */
 main {
-  width: 60%;
-  margin: auto;
   background-color: #eef0f2;
 }
 
 /* Apply padding to the sides of all sections */
-body > main > section {
+body>main>section {
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -44,13 +41,17 @@ body > main > section {
   color: white;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /* Removes default bullets in nav ul list */
-.header > div > nav > ul {
+.header>div>nav>ul {
   list-style: none;
 }
 
 /* Links */
-.header > div > nav > ul > li > a {
+.header>div>nav>ul>li>a {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
@@ -61,7 +62,7 @@ body > main > section {
 }
 
 /* Hover effect for links in the nav bar */
-.header > div > nav > ul > li > a:hover {
+.header>div>nav>ul>li>a:hover {
   color: red;
   font-size: 1.1rem;
 }
@@ -76,12 +77,12 @@ body > main > section {
   padding-bottom: 1rem;
 }
 
-.navigation > nav > ul {
+.navigation>nav>ul {
   display: flex;
   flex-wrap: wrap;
 }
 
-.navigation > nav > ul > li {
+.navigation>nav>ul>li {
   margin-right: 1rem;
 }
 
@@ -102,7 +103,7 @@ body > main > section {
 }
 
 /* make the photo rounded */
-.header-content-image > img {
+.header-content-image>img {
   border-radius: 100%;
   border: 1px solid rgb(54, 51, 51);
 }
@@ -206,33 +207,44 @@ meter::-webkit-meter-optimum-value {
   list-style: none;
 }
 
-@media screen and (max-width: 24em) {
+@media screen and (min-width: 50em) {
   main {
-    width: 100%;
+    width: 75%;
+    margin: auto;
   }
 }
 
-/* 480 a 960 */
-@media screen and (min-width: 25em) and (max-width: 60em) {
-  main {
-    width: 100%;
+/* 320 a 720 */
+@media screen and (min-width: 13em) and (max-width: 45em) {
+  body {
+    font-size: 14px;
   }
+
+  main {
+    max-width: 100%;
+    margin: 0;
+  }
+
   .navigation {
     align-items: flex-start;
   }
-  .navigation > nav > ul {
+
+  .navigation>nav>ul {
     display: flex;
     flex-flow: column wrap;
   }
+
   .header-content-name {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
   }
-  .header-content-image > img {
+
+  .header-content-image>img {
     max-width: 70%;
     height: 70%;
   }
+
   .header-content-image {
     display: flex;
     justify-content: center;
@@ -240,16 +252,20 @@ meter::-webkit-meter-optimum-value {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
+
   .skill-meter-card {
     flex-flow: column wrap;
   }
+
   meter::-webkit-meter-bar {
     width: 18rem;
   }
+
   .contact {
     flex-direction: column;
     align-items: center;
   }
+
   .contact-name-title {
     display: flex;
     flex-flow: column wrap;
