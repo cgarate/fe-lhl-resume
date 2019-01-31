@@ -206,6 +206,12 @@ meter::-webkit-meter-optimum-value {
   list-style: none;
 }
 
+@media screen and (max-width: 24em) {
+  main {
+    width: 100%;
+  }
+}
+
 /* 480 a 960 */
 @media screen and (min-width: 25em) and (max-width: 60em) {
   main {
