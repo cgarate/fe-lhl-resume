@@ -5,10 +5,16 @@
   They have not been thoroughly optimized and they don't try to be an example of good CSS practices.
  */
 /* Apply basic styles at body level so by default they cascade to all other tags */
+html {
+  font-size: 24px;
+}
+
 body {
-  font-family: 'Avenir', sans-serif;
-  font-size: 16px;
-  background-color: #a1b5d8;
+  background-color: #ddeeee;
+}
+
+.rambla-font-text {
+  font-family: 'Rambla', sans-serif;
 }
 
 /* Style a button (pill style) */
@@ -37,7 +43,7 @@ body>main>section {
 }
 
 .header {
-  background-color: #a1b5d8;
+  background-color: tomato;
   color: white;
 }
 
@@ -63,7 +69,7 @@ body>main>section {
 
 /* Hover effect for links in the nav bar */
 .header>div>nav>ul>li>a:hover {
-  color: red;
+  color: yellow;
   font-size: 1.1rem;
 }
 
@@ -79,7 +85,6 @@ body>main>section {
 
 .navigation>nav>ul {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .navigation>nav>ul>li {
@@ -88,7 +93,7 @@ body>main>section {
 
 .header-content {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   align-items: center;
 }
@@ -130,7 +135,7 @@ p::selection {
 .skills {
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
-  background-color: #a1b5d8;
+  background-color: tomato;
   color: white;
 }
 
@@ -149,7 +154,7 @@ meter::-webkit-meter-bar {
 }
 
 meter::-webkit-meter-optimum-value {
-  background: rgb(240, 176, 38);
+  background: gold;
 }
 
 /* Give more space width-wise to the meters */
@@ -192,7 +197,8 @@ meter::-webkit-meter-optimum-value {
 }
 
 .contact {
-  background-color: #a1b5d8;
+  background-color: tomato;
+  color: white;
   padding-left: 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -207,7 +213,7 @@ meter::-webkit-meter-optimum-value {
   list-style: none;
 }
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 54.9em) {
   main {
     width: 75%;
     margin: auto;
@@ -215,7 +221,7 @@ meter::-webkit-meter-optimum-value {
 }
 
 /* 320 a 720 */
-@media screen and (min-width: 13em) and (max-width: 45em) {
+@media screen and (min-width: 1em) and (max-width: 55em) {
   body {
     font-size: 14px;
   }
@@ -232,6 +238,10 @@ meter::-webkit-meter-optimum-value {
   .navigation>nav>ul {
     display: flex;
     flex-flow: column wrap;
+  }
+
+  .header-content {
+    flex-wrap: wrap;
   }
 
   .header-content-name {
