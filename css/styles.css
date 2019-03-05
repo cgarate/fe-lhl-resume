@@ -13,7 +13,7 @@ body {
   background-color: #ddeeee;
 }
 
-.rambla-font-text {
+.rambla-font {
   font-family: 'Rambla', sans-serif;
 }
 
@@ -52,12 +52,12 @@ body>main>section {
 }
 
 /* Removes default bullets in nav ul list */
-.header>div>nav>ul {
+.header>nav>ul {
   list-style: none;
 }
 
 /* Links */
-.header>div>nav>ul>li>a {
+.header>nav>ul>li>a {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
@@ -68,14 +68,14 @@ body>main>section {
 }
 
 /* Hover effect for links in the nav bar */
-.header>div>nav>ul>li>a:hover {
+.header>nav>ul>li>a:hover {
   color: yellow;
   font-size: 1.1rem;
 }
 
 .navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding-top: 0.5rem;
   margin-left: 1.5rem;
@@ -83,11 +83,11 @@ body>main>section {
   padding-bottom: 1rem;
 }
 
-.navigation>nav>ul {
+.navigation>ul {
   display: flex;
 }
 
-.navigation>nav>ul>li {
+.navigation>ul>li {
   margin-right: 1rem;
 }
 
