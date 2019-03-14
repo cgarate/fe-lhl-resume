@@ -268,7 +268,7 @@ meter::-webkit-meter-optimum-value {
   }
 
   meter::-webkit-meter-bar {
-    width: 18rem;
+    width: 15rem;
   }
 
   .contact {
